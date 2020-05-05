@@ -1,4 +1,5 @@
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
  * @author David Nickel, Benedikt Wotka
@@ -14,7 +15,11 @@ public class Starter {
    */
   public static void main(String[] args) {
     WordQuiz game = new WordQuiz();
-    ConsoleReader creader = new ConsoleReader(null);
+
+    InputStreamReader inread = new InputStreamReader(System.in);
+    BufferedReader reader = new BufferedReader(inread);
+
+    ConsoleReader creader = new ConsoleReader(reader);
     ConsoleWriter cwriter = new ConsoleWriter();
     ExcelWriter exwriter = new ExcelWriter();
 
