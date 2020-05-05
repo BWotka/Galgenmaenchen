@@ -20,8 +20,8 @@ public class Starter {
     BufferedReader reader = new BufferedReader(inread);
 
     ConsoleReader creader = new ConsoleReader(reader);
-    ConsoleWriter cwriter = new ConsoleWriter();
-    ExcelWriter exwriter = new ExcelWriter();
+    Writer cwriter = new ConsoleWriter();
+    Writer exwriter = new ExcelWriter();
 
     game.addWriter(cwriter);
     game.addWriter(exwriter);
