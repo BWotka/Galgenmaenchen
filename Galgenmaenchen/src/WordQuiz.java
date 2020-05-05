@@ -1,4 +1,4 @@
-import java.io.Writer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class WordQuiz {
   /*
    * Adds WordList to WordLists to choose from
    * 
-   * @return returns boolean weither method was succesful
+   * @return returns boolean weither method was successful
    */
   public boolean addWordList(WordList pwordList) {
     boolean listexist = false;
@@ -95,7 +95,7 @@ public class WordQuiz {
     String gameWord = new WordList(wordSubject).getWordOfLength(wordLength);
 
     // both writers are set up
-    for (Writer aktWriter : MyWriters) {
+    for (Writer aktWriter : myWriters) {
       aktWriter.setSubject(wordSubject);
       aktWriter.setWord(gameWord);
       aktWriter.setDifficulty(gameDifficulty);
@@ -126,7 +126,7 @@ public class WordQuiz {
           }
         }
 
-        for (Writer aktWriter : MyWriters) {
+        for (Writer aktWriter : myWriters) {
           aktWriter.write(correctLetters, letter, errorsLeft);
 
         }
