@@ -1,20 +1,24 @@
 
 public class WordList {
   private Subject subject;
-  
+
   public WordList(Subject psubject) {
-	  subject = psubject;
+    subject = psubject;
   }
-  
+
+  public boolean readListFromFile(String filename) {
+    return true;
+  }
+
   public String getRandomWord() {
-	return ;  
+    return;
   }
-  
+
   public String getWordOfLength(int plength) {
-	  return ;
+    return;
   }
-  
+
   public Subject getSubject() {
-	  return this.subject;
+    return this.subject;
   }
 }
