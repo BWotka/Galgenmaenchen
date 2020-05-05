@@ -1,3 +1,4 @@
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -5,12 +6,12 @@ import java.util.List;
 public class WordQuiz {
 
   protected ConsoleReader myCReader;
-  protected Writer myExWriter;
-  protected Writer myWriter;
+  protected List<Writer> myWriters;
   protected List<WordList> wordLists;
 
   public WordQuiz() {
     wordLists = new ArrayList<>();
+    myWriters = new ArrayList<>();
 
   }
 
@@ -29,11 +30,11 @@ public class WordQuiz {
   }
 
   public void addWriter(Writer pWriter) {
-    myWriter = pWriter;
+    myWriters.add(pWriter);
   }
 
   public void playGame() {
-
+    playGame(8, Subject.Animals, Difficulty.Normal);
   }
 
   public void playGame(int wordLength) {
@@ -62,11 +63,47 @@ public class WordQuiz {
 
   public void playGame(int wordLength, Subject wordSubject, Difficulty gameDifficulty) {
     String gameWord = new WordList(wordSubject).getWordOfLength(wordLength);
-    myWriter.setSubject(wordSubject);
-    myWriter.setWord(gameWord);
-    myWriter.setDifficulty(gameDifficulty);
 
-    // the word presented in the console, will be * until the correct letter is found (A-Z, '-')
+     // both writers are set up
+    for (Writer aktWriter : MyWriters) {
+      aktWriter.setSubject(wordSubject);
+      aktWriter.setWord(gameWord);
+      aktWriter.setDifficulty(gameDifficulty);
+    }
+    
+    char[] correctLetters = new char[wordLength];
+    int errorsLeft = gameDifficulty.getDifficulty();
+    char letter;
+    
+    // the game runs in this loop
+    while(errorsLeft > 0) {
+      letter = myCReader.readNextChar();
+      
+      // letter is wrong
+      if (gameWord.indexOf(letter) == -1) {
+        errorsLeft += -1;
+      }
+      // letter is right
+      else {
+        //the letter gets put into the list of correct chars
+        for (int c = 0; c < correctLetters.length; c++) {
+          if (correctLetters[c] == '\u0000') {
+            correctLetters[c] = letter;
+            c = correctLetters.length;
+          }
+        }
+        
+        for (Writer aktWriter : MyWriters) {
+          aktWriter.write(correctLetters[], letter, errorsLeft);
+
+        }
+                
+      }
+      
+     
+    }
+/*
+    // the word presented in the console, will be _ until the correct letter is found (A-Z, '-')
     char[] knownWord = new char[wordLength];
     for (char b : knownWord) {
       b = '*';
@@ -129,7 +166,11 @@ public class WordQuiz {
           }
         }
       }
-      myWriter.write(triedChars, letter, errorsLeft);
+      for (Writer aktWriter : MyWriters) {
+        aktWriter.write(triedChars, letter, errorsLeft);
+
+      }
+
 
       // if the solution is found out:
       if (Arrays.equals(knownWord, gameWord.toCharArray())) {
@@ -147,7 +188,7 @@ public class WordQuiz {
     System.out
         .println("You made " + gameDifficulty.getDifficulty() + "mistakes and lost the game!");
 
-
+*/
   }
 
 }
