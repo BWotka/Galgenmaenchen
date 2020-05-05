@@ -15,22 +15,22 @@ public class WordQuiz {
 
   }
 
-  public boolean addWordList(WordList pWordList) {
-    wordLists.add(pWordList);
+  public boolean addWordList(WordList pwordList) {
+    wordLists.add(pwordList);
     return true;
   }
 
-  public boolean deleteWordList(WordList pWordList) {
-    wordLists.remove(pWordList);
+  public boolean deleteWordList(WordList pwordList) {
+    wordLists.remove(pwordList);
     return true;
   }
 
-  public void setConsoleReader(ConsoleReader pCReader) {
-    myCReader = pCReader;
+  public void setConsoleReader(ConsoleReader creader) {
+    myCReader = creader;
   }
 
-  public void addWriter(Writer pWriter) {
-    myWriters.add(pWriter);
+  public void addWriter(Writer pwriter) {
+    myWriters.add(pwriter);
   }
 
   public void playGame() {
@@ -64,7 +64,7 @@ public class WordQuiz {
   public void playGame(int wordLength, Subject wordSubject, Difficulty gameDifficulty) {
     String gameWord = new WordList(wordSubject).getWordOfLength(wordLength);
 
-     // both writers are set up
+    // both writers are set up
     for (Writer aktWriter : MyWriters) {
       aktWriter.setSubject(wordSubject);
       aktWriter.setWord(gameWord);
@@ -76,8 +76,9 @@ public class WordQuiz {
     char letter;
     
     // the game runs in this loop
-    while(errorsLeft > 0) {
-      letter = myCReader.readNextChar();
+    while (errorsLeft > 0) {
+      letter = Character.toUpperCase(myCReader.readNextChar());
+      
       
       // letter is wrong
       if (gameWord.indexOf(letter) == -1) {
@@ -102,7 +103,7 @@ public class WordQuiz {
       
      
     }
-/*
+    /*
     // the word presented in the console, will be _ until the correct letter is found (A-Z, '-')
     char[] knownWord = new char[wordLength];
     for (char b : knownWord) {
@@ -188,7 +189,7 @@ public class WordQuiz {
     System.out
         .println("You made " + gameDifficulty.getDifficulty() + "mistakes and lost the game!");
 
-*/
+    */
   }
 
 }
