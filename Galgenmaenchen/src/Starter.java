@@ -1,14 +1,15 @@
-/**
- * 
- */
+
 
 /**
  * @author David Nickel, Benedikt Wotka
- *
+ * @version 0.1
+ * 
  */
 public class Starter {
 
   /**
+   * main method to setup and start the game.
+   * 
    * @param args
    */
   public static void main(String[] args) {
