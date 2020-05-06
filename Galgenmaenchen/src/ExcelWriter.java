@@ -12,8 +12,18 @@ import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 
+/**
+ * 
+ * @author Benedikt Wotka, David Nickel
+ * @version 0.1
+ *
+ */
 public class ExcelWriter extends Writer {
-
+  /**
+   * @param guessedLetters all letters that the user guessed correctly.
+   * @param newLetter the last letter that the user put in.
+   * @param leftFails enamored attempts.
+   */
   @Override
   public boolean write(char[] guessedLetters, char newLetter, int leftFails) {
     File file = new File(subject + ".xls");
@@ -21,12 +31,10 @@ public class ExcelWriter extends Writer {
     Sheet sheet;
 
 
-    // make header of .xls
+     // if the file not exists, it would be created and the head-row would be created.
     if (!file.exists()) {
-      // create a new sheet
       sheet = workbook.createSheet();
 
-      // format header
       Font fontHeader = workbook.createFont();
       fontHeader.setFontHeightInPoints((short) 11);
       fontHeader.setBold(true);
@@ -52,23 +60,23 @@ public class ExcelWriter extends Writer {
       try {
         workbook = new HSSFWorkbook(new FileInputStream(file));
       } catch (Exception e) {
-        System.out.println("Error");
+        System.out.println("Error beim verbinden des Workbooks mit der Datei " + subject + ".xls");
       }
       sheet = workbook.getSheetAt(0);
     }
 
-    // format of .xls
+    //formate the table-body
     Font font1 = workbook.createFont();
     font1.setFontHeightInPoints((short) 11);
-
-    CellStyle cellstyle1 = workbook.createCellStyle();
-    CellStyle cellstyle2 = workbook.createCellStyle();
-    cellstyle1.setFont(font1);
-    cellstyle2.setFont(font1);
-    cellstyle1.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_25_PERCENT.getIndex());
-    cellstyle1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-
-    // add row to .xls
+    CellStyle cellstyleBody = workbook.createCellStyle();
+    cellstyleBody.setFont(font1);
+    
+    if (sheet.getLastRowNum() % 2 == 1) { //every second row is grey to make it more clearly
+      cellstyleBody.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_25_PERCENT.getIndex());
+      cellstyleBody.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+    }
+    
+    //add the next row to the end of the sheet
     Row row = sheet.createRow(sheet.getLastRowNum() + 1);
     Cell cell0 = row.createCell(0);
     Cell cell1 = row.createCell(1);
@@ -85,30 +93,24 @@ public class ExcelWriter extends Writer {
     cell2.setCellValue(Character.toString(newLetter));
     cell3.setCellValue(Integer.toString(leftFails));
 
-    if (sheet.getLastRowNum() % 2 == 1) {
-      cell0.setCellStyle(cellstyle1);
-      cell1.setCellStyle(cellstyle1);
-      cell2.setCellStyle(cellstyle1);
-      cell3.setCellStyle(cellstyle1);
-    } else {
-      cell0.setCellStyle(cellstyle2);
-      cell1.setCellStyle(cellstyle2);
-      cell2.setCellStyle(cellstyle2);
-      cell3.setCellStyle(cellstyle2);
-    }
+    cell0.setCellStyle(cellstyleBody);
+    cell1.setCellStyle(cellstyleBody);
+    cell2.setCellStyle(cellstyleBody);
+    cell3.setCellStyle(cellstyleBody);
 
     sheet.autoSizeColumn(0);
     sheet.autoSizeColumn(2);
     sheet.autoSizeColumn(3);
     sheet.autoSizeColumn(4);
 
+    //save it to the file
     try {
       FileOutputStream output = new FileOutputStream(subject + ".xls");
       workbook.write(output);
       output.close();
       workbook.close();
     } catch (Exception e) {
-      System.out.println("Error");
+      System.out.println("Fehler beim schreiben in die Datei " + subject + ".xls");
       return false;
     }
 
