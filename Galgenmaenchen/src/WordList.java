@@ -13,8 +13,6 @@ public class WordList {
   public WordList(Subject pSubject) {
     subject = pSubject;
     words = new ArrayList<>();
-    System.out.println(pSubject.toString() + ".txt");
-    System.out.println(new File(pSubject.toString() + ".txt").getAbsolutePath());
     if (readListFromFile(pSubject.toString() + ".txt")) {
       System.out.println("List with the topic '" + subject.toString() + "' was succesfully read.");
     }
@@ -38,8 +36,8 @@ public class WordList {
   }
 
   public String getRandomWord() {
-    return words.get(1).getword();
-    // return words.get(ThreadLocalRandom.current().nextInt(0, words.size() + 1)).getword();
+
+    return words.get(ThreadLocalRandom.current().nextInt(0, words.size())).getword();
   }
 
   public String getWordOfLength(int pLength) {
@@ -51,7 +49,7 @@ public class WordList {
         wordsWithLength.add(word);
       }
     }
-    return wordsWithLength.get(ThreadLocalRandom.current().nextInt(0, wordsWithLength.size() + 1))
+    return wordsWithLength.get(ThreadLocalRandom.current().nextInt(0, wordsWithLength.size()))
         .getword();
 
   }
