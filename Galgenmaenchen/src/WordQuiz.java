@@ -155,14 +155,16 @@ public class WordQuiz {
         }
 
       }
-      if (correctLetters.length == wordLength) {
+      if (correctLetters[correctLetters.length - 1] == letter) {
         System.out.println("You won!");
         System.out.println("You correctly guessed the word: " + gameWord);
         System.out.println("You still had " + errorsLeft + " tries until gameover");
+        return;
       }
       if (errorsLeft == 0) {
         System.out.println("Gameover! You lost");
         System.out.println("The word was: " + gameWord);
+        return;
       }
     }
 

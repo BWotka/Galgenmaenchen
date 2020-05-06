@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 
 /**
  * 
@@ -19,12 +18,13 @@ public class ConsoleReader {
    * @return returns input Char
    */
   public char readNextChar() {
-    System.out.println("Write a single character that you want to guess");
+    System.out.println("Write a single character that you want to guess:");
     try {
       return reader.readLine().charAt(0);
-    } catch (IOException e) {
+    } catch (Exception e) {
       System.out.println("Error when reading the letter.");
-      return 'a';
+      System.out.println("Default value A was returned");
+      return 'A';
     }
   }
 }
