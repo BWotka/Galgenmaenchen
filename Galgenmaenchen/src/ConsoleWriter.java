@@ -1,6 +1,18 @@
-
+/**
+ * 
+ * @author Benedikt Wotka, David Nickel
+ * @version 0.1 @
+ *
+ */
 public class ConsoleWriter extends Writer {
 
+  /**
+   * 
+   * @return correct: if the last letter is correct, guess is true.
+   * @param guessedLetters all letters that the user guessed correctly.
+   * @param newLetter the last letter that the user put in.
+   * @param leftFails enamored attempts.
+   */
   @Override
   public boolean write(char[] guessedLetters, char newLetter, int leftFails) {
     System.out.println("verbleibende Fehlversuche: " + leftFails);
@@ -11,29 +23,33 @@ public class ConsoleWriter extends Writer {
     System.out.println();
     System.out.println("der geratene Buchstabe ist: " + newLetter);
 
-    boolean guess = false;
-    if (word.indexOf(newLetter) != -1) {
-      guess = true;
-    }
-    for (int i = 0; i < word.length(); i++) {
+    
+    for (int i = 0; i < word.length(); i++) { //output the word in the current state of the game
       boolean guessed = false;
-      if (word.charAt(i) == '-') {
+      if (word.charAt(i) == '-') { //'-' is the symbol for a whitespace and the user has not to guess it
         System.out.print(word.charAt(i));
       } else {
         for (int j = 0; j < guessedLetters.length; j++) {
           if (word.charAt(i) == guessedLetters[j]) {
-            System.out.print(word.charAt(i));
+            System.out.print(word.charAt(i) + " ");
             guessed = true;
           }
         }
         if (!guessed) {
-          System.out.print("_");
+          System.out.print("_ ");
         }
       }
     }
     System.out.println();
 
-    return guess;
+    boolean correct; //tests if the new letter is in the word
+    if (word.indexOf(newLetter) != -1) {
+      correct = true;
+    }
+    else {
+      correct = false;
+    }
+    return correct;
   }
 
 }
