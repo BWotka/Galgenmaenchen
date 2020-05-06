@@ -1,4 +1,11 @@
-
+/**
+ * 
+ * @author Benedikt Wotka, David Nickel
+ * @version 0.1
+ * 
+ *          Enum of all possible difficulties
+ *
+ */
 public enum Difficulty {
   Easy(15), Normal(10), Hard(5), Extrem(1);
 

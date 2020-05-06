@@ -5,6 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 
+ * @author Benedikt Wotka, David Nickel
+ * @version 0.1
+ * 
+ *          This class saves a list of words from a specific subject
+ *
+ */
 public class WordList {
   private Subject subject;
   protected List<QuizWord> words;
@@ -19,6 +27,11 @@ public class WordList {
 
   }
 
+  /**
+   * 
+   * @param fileName Name of the file e.g. : "Animals.txt"
+   * @return weither the file could be read
+   */
   protected boolean readListFromFile(String fileName) {
 
     try {
@@ -35,11 +48,20 @@ public class WordList {
     return true;
   }
 
+  /**
+   * 
+   * @return returns a random word from this list
+   */
   public String getRandomWord() {
 
     return words.get(ThreadLocalRandom.current().nextInt(0, words.size())).getword();
   }
 
+  /**
+   * 
+   * @param pLength length of the word that is wanted
+   * @return returns a word with the specific length
+   */
   public String getWordOfLength(int pLength) {
     List<QuizWord> wordsWithLength = new ArrayList<>();
 

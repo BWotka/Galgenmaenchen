@@ -1,4 +1,11 @@
-
+/**
+ * 
+ * @author Benedikt Wotka, David Nickel
+ * @version 0.1
+ * 
+ *          Class that holds a quizword and its length
+ *
+ */
 public class QuizWord {
   private String word;
   private int length;

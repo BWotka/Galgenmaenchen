@@ -1,6 +1,13 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 
+/**
+ * 
+ * @author Benedikt Wotka, David Nickel
+ * @version 0.1
+ *
+ *          This class is used to read the players guessed letters
+ */
 public class ConsoleReader {
   private BufferedReader reader;
 
@@ -8,6 +15,9 @@ public class ConsoleReader {
     reader = breader;
   }
 
+  /**
+   * @return returns input Char
+   */
   public char readNextChar() {
     try {
       return reader.readLine().charAt(0);

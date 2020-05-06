@@ -11,8 +11,6 @@ public class Starter {
   /**
    * main method to setup and start the game.
    * 
-   * 
-   * 
    */
   public static void main(String[] args) {
     WordQuiz game = new WordQuiz();
@@ -44,6 +42,7 @@ public class Starter {
     game.addWordList(listWuppi);
     game.addWordList(listFluppi);
 
+    System.out.println("Gelesenes Zeichen: " + creader.readNextChar());
 
     game.playGame(6, Subject.Animals, Difficulty.Normal);
 

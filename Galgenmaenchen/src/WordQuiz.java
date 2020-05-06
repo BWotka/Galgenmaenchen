@@ -40,6 +40,12 @@ public class WordQuiz {
 
   }
 
+  /**
+   * Removes one WordList from the wordLists List
+   * 
+   * @param pwordList List that should be removed
+   * @return weither the removal was succesful
+   */
   public boolean deleteWordList(WordList pwordList) {
     return wordLists.remove(pwordList);
 
@@ -84,11 +90,11 @@ public class WordQuiz {
   /*
    * @method playGame and variants start the game
    * 
-   * @param wordLength Length of word default:8
+   * @param wordLength Length of word default: 8
    * 
-   * @param wordSubject Subject/Topic of Word
+   * @param wordSubject Subject/Topic of Word default: animal
    * 
-   * @param gameDifficulty Amount of errors before gameend
+   * @param gameDifficulty Amount of errors before gameend default: normal(10)
    * 
    */
   public void playGame(int wordLength, Subject wordSubject, Difficulty gameDifficulty) {
