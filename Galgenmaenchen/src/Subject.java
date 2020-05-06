@@ -1,9 +1,10 @@
 /**
+ * Enum of all possible subjects.
  * 
  * @author Benedikt Wotka, David Nickel
  * @version 0.1
  * 
- *          Enum of all possible subjects
+ *
  *
  */
 public enum Subject {

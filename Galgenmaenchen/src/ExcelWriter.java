@@ -2,7 +2,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.sql.Timestamp;
-
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
@@ -13,6 +12,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 
 /**
+ * Writes information on the game in an excel table.
  * 
  * @author Benedikt Wotka, David Nickel
  * @version 0.1
@@ -20,6 +20,8 @@ import org.apache.poi.ss.usermodel.Sheet;
  */
 public class ExcelWriter extends Writer {
   /**
+   * Writes the information.
+   * 
    * @param guessedLetters all letters that the user guessed correctly.
    * @param newLetter the last letter that the user put in.
    * @param leftFails enamored attempts.
@@ -31,7 +33,7 @@ public class ExcelWriter extends Writer {
     Sheet sheet;
 
 
-     // if the file not exists, it would be created and the head-row would be created.
+    // if the file does not exists, it would be created and the head-row would be created.
     if (!file.exists()) {
       sheet = workbook.createSheet();
 
@@ -65,18 +67,19 @@ public class ExcelWriter extends Writer {
       sheet = workbook.getSheetAt(0);
     }
 
-    //formate the table-body
+    // formate the table-body
     Font font1 = workbook.createFont();
     font1.setFontHeightInPoints((short) 11);
     CellStyle cellstyleBody = workbook.createCellStyle();
     cellstyleBody.setFont(font1);
-    
-    if (sheet.getLastRowNum() % 2 == 1) { //every second row is grey to make it more clearly
-      cellstyleBody.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_25_PERCENT.getIndex());
+
+    if (sheet.getLastRowNum() % 2 == 1) { // every second row is grey to make it more clearly
+      cellstyleBody
+          .setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_25_PERCENT.getIndex());
       cellstyleBody.setFillPattern(FillPatternType.SOLID_FOREGROUND);
     }
-    
-    //add the next row to the end of the sheet
+
+    // add the next row to the end of the sheet
     Row row = sheet.createRow(sheet.getLastRowNum() + 1);
     Cell cell0 = row.createCell(0);
     Cell cell1 = row.createCell(1);
@@ -103,7 +106,7 @@ public class ExcelWriter extends Writer {
     sheet.autoSizeColumn(3);
     sheet.autoSizeColumn(4);
 
-    //save it to the file
+    // save it to the file
     try {
       FileOutputStream output = new FileOutputStream(subject + ".xls");
       workbook.write(output);

@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
+ * Starter, starts the game.
+ * 
  * @author David Nickel, Benedikt Wotka
  * @version 0.1
  * 

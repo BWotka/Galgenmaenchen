@@ -1,4 +1,5 @@
 /**
+ * Used to write information on the game in the console.
  * 
  * @author Benedikt Wotka, David Nickel
  * @version 0.1 @
@@ -7,11 +8,12 @@
 public class ConsoleWriter extends Writer {
 
   /**
+   * Writes information on the situation on the console.
    * 
    * @return correct: if the last letter is correct, guess is true.
    * @param guessedLetters all letters that the user guessed correctly.
    * @param newLetter the last letter that the user put in.
-   * @param leftFails enamored attempts.
+   * @param leftFails false attempts.
    */
   @Override
   public boolean write(char[] guessedLetters, char newLetter, int leftFails) {
@@ -27,8 +29,8 @@ public class ConsoleWriter extends Writer {
     for (int i = 0; i < word.length(); i++) { // output the word in the current state of the game
 
       boolean guessed = false;
-      if (word.charAt(i) == '-') { // '-' is the symbol for a whitespace and the user has not to
-                                   // guess it
+      if (word.charAt(i) == '-') { // '-' is the symbol for a whitespace , the user wont have to
+        // guess it
         System.out.print(word.charAt(i));
       } else {
         for (int j = 0; j < guessedLetters.length; j++) {

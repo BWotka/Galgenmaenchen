@@ -1,11 +1,12 @@
 import java.io.BufferedReader;
 
 /**
+ * This class is used to read the players guessed letters.
  * 
  * @author Benedikt Wotka, David Nickel
  * @version 0.1
  *
- *          This class is used to read the players guessed letters
+ * 
  */
 public class ConsoleReader {
   private BufferedReader reader;
@@ -15,6 +16,8 @@ public class ConsoleReader {
   }
 
   /**
+   * Gets a single char from the console.
+   * 
    * @return returns input Char
    */
   public char readNextChar() {

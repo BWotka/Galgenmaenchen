@@ -8,8 +8,8 @@ public class WordQuiz {
   protected List<Writer> myWriters;
   protected List<WordList> wordLists;
 
-  /*
-   * Verarbeitung der Informationen fuer das Galgenmaenchen
+  /**
+   * Verarbeitung der Informationen fuer das Galgenmaenchen.
    */
   public WordQuiz() {
     wordLists = new ArrayList<>();
@@ -17,8 +17,8 @@ public class WordQuiz {
 
   }
 
-  /*
-   * Adds WordList to WordLists to choose from
+  /**
+   * Adds WordList to WordLists to choose from.
    * 
    * @return returns boolean weither method was successful
    */
@@ -41,7 +41,7 @@ public class WordQuiz {
   }
 
   /**
-   * Removes one WordList from the wordLists List
+   * Removes one WordList from the wordLists List.
    * 
    * @param pwordList List that should be removed
    * @return weither the removal was succesful
@@ -87,7 +87,9 @@ public class WordQuiz {
     playGame(wordLength, wordSubject, Difficulty.Normal);
   }
 
-  /*
+  /**
+   * playing method.
+   * 
    * @method playGame and variants start the game
    * 
    * @param wordLength Length of word default: 8
@@ -126,9 +128,9 @@ public class WordQuiz {
         for (Writer aktWriter : myWriters) {
           aktWriter.write(correctLetters, letter, errorsLeft);
         }
-      }
-      // letter is right
-      else {
+
+        // letter is right
+      } else {
         // test if letter was tried before
         boolean triedBefore = false;
         for (char t : correctLetters) {

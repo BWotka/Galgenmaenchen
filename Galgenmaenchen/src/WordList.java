@@ -6,11 +6,11 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
+ * This class saves a list of words from a specific subject.
  * 
  * @author Benedikt Wotka, David Nickel
  * @version 0.1
  * 
- *          This class saves a list of words from a specific subject
  *
  */
 public class WordList {
@@ -18,18 +18,24 @@ public class WordList {
   protected List<QuizWord> words;
   Scanner sc;
 
-  public WordList(Subject pSubject) {
-    subject = pSubject;
+  /**
+   * constructor of WordList.
+   * 
+   * @param psubject Topic of the Word List that gets created
+   */
+  public WordList(Subject psubject) {
+    subject = psubject;
     words = new ArrayList<>();
-    if (!readListFromFile(pSubject.toString() + ".txt")) {
-      System.out.println("Error with reading in" + pSubject.toString() + ".txt");
+    if (!readListFromFile(psubject.toString() + ".txt")) {
+      System.out.println("Error with reading in" + psubject.toString() + ".txt");
     }
 
   }
 
   /**
+   * Method to read Words of a topic from a text file.
    * 
-   * @param fileName Name of the file e.g. : "Animals.txt"
+   * @param fileName Name of the file, has to be topic of the list e.g. : "Animals.txt"
    * @return weither the file could be read
    */
   protected boolean readListFromFile(String fileName) {
@@ -49,8 +55,9 @@ public class WordList {
   }
 
   /**
+   * Gives random word from the list.
    * 
-   * @return returns a random word from this list
+   * @return returns a random String
    */
   public String getRandomWord() {
 
@@ -58,16 +65,17 @@ public class WordList {
   }
 
   /**
+   * Gets a word with an specific length.
    * 
-   * @param pLength length of the word that is wanted
+   * @param plength length of the word that is wanted
    * @return returns a word with the specific length
    */
-  public String getWordOfLength(int pLength) {
+  public String getWordOfLength(int plength) {
     List<QuizWord> wordsWithLength = new ArrayList<>();
 
     // all words with the correct length are placed in a separate list
     for (QuizWord word : words) {
-      if (word.getlength() == pLength) {
+      if (word.getlength() == plength) {
         wordsWithLength.add(word);
       }
     }
