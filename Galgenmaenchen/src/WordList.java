@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -19,11 +20,15 @@ public class WordList {
   }
 
   protected boolean readListFromFile(String fileName) {
+
     try {
       sc = new Scanner(new File(fileName));
-    } catch (Exception e) {
+    } catch (FileNotFoundException e) {
+
+      e.printStackTrace();
       return false;
     }
+
     while (sc.hasNextLine()) {
       words.add(new QuizWord(sc.nextLine()));
     }
@@ -31,7 +36,8 @@ public class WordList {
   }
 
   public String getRandomWord() {
-    return words.get(ThreadLocalRandom.current().nextInt(0, words.size() + 1)).getword();
+
+    return words.get(ThreadLocalRandom.current().nextInt(0, words.size())).getword();
   }
 
   public String getWordOfLength(int pLength) {
@@ -43,7 +49,7 @@ public class WordList {
         wordsWithLength.add(word);
       }
     }
-    return wordsWithLength.get(ThreadLocalRandom.current().nextInt(0, wordsWithLength.size() + 1))
+    return wordsWithLength.get(ThreadLocalRandom.current().nextInt(0, wordsWithLength.size()))
         .getword();
 
   }
