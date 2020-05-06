@@ -1,3 +1,5 @@
+package hangman;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -13,6 +15,7 @@ public class Starter {
   /**
    * main method to setup and start the game.
    * 
+   * @param args .
    */
   public static void main(String[] args) {
     WordQuiz game = new WordQuiz();

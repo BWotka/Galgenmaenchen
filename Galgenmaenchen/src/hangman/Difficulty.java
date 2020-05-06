@@ -1,3 +1,5 @@
+package hangman;
+
 /**
  * Enum of all possible difficulties.
  * 

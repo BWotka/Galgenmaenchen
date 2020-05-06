@@ -1,3 +1,5 @@
+package hangman;
+
 /**
  * Used to write information on the game in the console.
  * 

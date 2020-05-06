@@ -1,3 +1,5 @@
+package hangman;
+
 /**
  * Abstract class used to give information to the player.
  * 

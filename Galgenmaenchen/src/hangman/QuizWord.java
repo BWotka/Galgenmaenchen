@@ -1,3 +1,5 @@
+package hangman;
+
 /**
  * Class that holds a quizword and its length.
  * 

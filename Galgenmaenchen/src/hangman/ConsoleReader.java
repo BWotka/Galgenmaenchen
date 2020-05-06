@@ -1,3 +1,5 @@
+package hangman;
+
 import java.io.BufferedReader;
 
 /**

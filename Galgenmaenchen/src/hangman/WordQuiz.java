@@ -1,3 +1,4 @@
+package hangman;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,9 @@ public class WordQuiz {
   /**
    * Adds WordList to WordLists to choose from.
    * 
+   * @param pwordList WordList that gets added to List
    * @return returns boolean weither method was successful
+   * 
    */
   public boolean addWordList(WordList pwordList) {
     boolean listexist = false;
@@ -90,7 +93,7 @@ public class WordQuiz {
   /**
    * playing method.
    * 
-   * @method playGame and variants start the game
+   * 
    * 
    * @param wordLength Length of word default: 8
    * 
@@ -157,7 +160,14 @@ public class WordQuiz {
         }
 
       }
-      if (correctLetters[correctLetters.length - 1] == letter) {
+      boolean finish = true;
+      for (int l = 0; l < gameWord.length(); l++) {
+
+
+
+      }
+
+      if (finish) {
         System.out.println("You won!");
         System.out.println("You correctly guessed the word: " + gameWord);
         System.out.println("You still had " + errorsLeft + " tries until gameover");
