@@ -30,17 +30,19 @@ public class Starter {
 
     WordList listAnimal = new WordList(Subject.Animals);
     WordList listCar = new WordList(Subject.Cars);
-    WordList listDrink = new WordList(Subject.Drinks);
-    WordList listCountries = new WordList(Subject.Countries);
-    WordList listCities = new WordList(Subject.Cities);
+    WordList listSoftDrink = new WordList(Subject.SoftDrinks);
+    WordList listVideogames = new WordList(Subject.Videogames);
+    WordList listWuppi = new WordList(Subject.Wuppi);
+    WordList listFluppi = new WordList(Subject.Fluppi);
     System.out.println(listAnimal.getRandomWord());
 
 
     game.addWordList(listAnimal);
     game.addWordList(listCar);
-    game.addWordList(listDrink);
-    game.addWordList(listCountries);
-    game.addWordList(listCities);
+    game.addWordList(listSoftDrink);
+    game.addWordList(listVideogames);
+    game.addWordList(listWuppi);
+    game.addWordList(listFluppi);
 
 
     game.playGame(6, Subject.Animals, Difficulty.Normal);
