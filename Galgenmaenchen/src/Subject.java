@@ -1,4 +1,4 @@
 
 public enum Subject {
-  Animals(), Cars(), Drinks(), Countries(), Cities();
+  Animals(), Cars(), SoftDrinks(), Videogames(), Wuppi(), Fluppi();
 }
