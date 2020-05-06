@@ -31,19 +31,15 @@ public class ConsoleWriter extends Writer {
     for (int i = 0; i < word.length(); i++) { // output the word in the current state of the game
 
       boolean guessed = false;
-      if (word.charAt(i) == '-') { // '-' is the symbol for a whitespace , the user wont have to
-        // guess it
-        System.out.print(word.charAt(i));
-      } else {
-        for (int j = 0; j < guessedLetters.length; j++) {
-          if (word.charAt(i) == guessedLetters[j]) {
-            System.out.print(word.charAt(i) + " ");
-            guessed = true;
-          }
+
+      for (int j = 0; j < guessedLetters.length; j++) {
+        if (word.charAt(i) == guessedLetters[j]) {
+          System.out.print(word.charAt(i) + " ");
+          guessed = true;
         }
-        if (!guessed) {
-          System.out.print("_ ");
-        }
+      }
+      if (!guessed) {
+        System.out.print("_ ");
       }
     }
     System.out.println();

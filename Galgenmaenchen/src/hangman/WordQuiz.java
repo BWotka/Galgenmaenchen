@@ -119,6 +119,9 @@ public class WordQuiz {
     int errorsLeft = gameDifficulty.getDifficulty();
     char letter;
 
+    if (gameWord.indexOf('-') != -1) {
+      correctLetters[0] = '-';
+    }
     // the game runs in this loop
     while (errorsLeft > 0) {
 
@@ -143,6 +146,7 @@ public class WordQuiz {
         }
 
 
+
         if (!triedBefore) {
           // the letter gets put into the list of correct chars
           for (int c = 0; c < correctLetters.length; c++) {
@@ -160,14 +164,21 @@ public class WordQuiz {
         }
 
       }
-      boolean finish = true;
+      boolean missing = false;
       for (int l = 0; l < gameWord.length(); l++) {
-
-
+        boolean missinghere = true;
+        for (int k = 0; k < correctLetters.length; k++) {
+          if (gameWord.charAt(l) == correctLetters[k]) {
+            missinghere = false;
+          }
+        }
+        if (missinghere) {
+          missing = true;
+        }
 
       }
 
-      if (finish) {
+      if (!missing) {
         System.out.println("You won!");
         System.out.println("You correctly guessed the word: " + gameWord);
         System.out.println("You still had " + errorsLeft + " tries until gameover");

@@ -73,6 +73,8 @@ public class WordList {
    * @return returns a word with the specific length
    */
   public String getWordOfLength(int plength) {
+
+
     List<QuizWord> wordsWithLength = new ArrayList<>();
 
     // all words with the correct length are placed in a separate list
@@ -81,6 +83,7 @@ public class WordList {
         wordsWithLength.add(word);
       }
     }
+
     return wordsWithLength.get(ThreadLocalRandom.current().nextInt(0, wordsWithLength.size()))
         .getword();
 
