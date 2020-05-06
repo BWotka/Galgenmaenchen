@@ -1,4 +1,9 @@
-
+/**
+ * 
+ * @author Benedikt Wotka, David Nickel
+ * @version 0.1
+ *
+ */
 public abstract class Writer {
 	protected Subject subject;
 	protected Difficulty difficulty;
