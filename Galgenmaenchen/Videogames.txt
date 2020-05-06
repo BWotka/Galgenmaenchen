@@ -8,25 +8,25 @@ Allentown
 Amarillo
 Anaheim
 Anchorage
-Ann Arbor
+Ann-Arbor
 Antioch
-Apple Valley
+Apple-Valley
 Appleton
 Arlington
 Arvada
 Asheville
 Athens
 Atlanta
-Atlantic City
+Atlantic-City
 Augusta
 Aurora
 Austin
 Bakersfield
 Baltimore
 Barnstable
-Baton Rouge
+Baton-Rouge
 Beaumont
-Bel Air
+Bel-Air
 Bellevue
 Berkeley
 Bethlehem
@@ -34,8 +34,8 @@ Billings
 Birmingham
 Bloomington
 Boise
-Boise City
-Bonita Springs
+Boise-City
+Bonita-Springs
 Boston
 Boulder
 Bradenton
@@ -49,11 +49,11 @@ Burbank
 Burlington
 Cambridge
 Canton
-Cape Coral
+Cape-Coral
 Carrollton
 Cary
-Cathedral City
-Cedar Rapids
+Cathedral-City
+Cedar-Rapids
 Champaign
 Chandler
 Charleston
@@ -61,40 +61,40 @@ Charlotte
 Chattanooga
 Chesapeake
 Chicago
-Chula Vista
+Chula-Vista
 Cincinnati
-Clarke County
+Clarke-County
 Clarksville
 Clearwater
 Cleveland
-College Station
-Colorado Springs
+College-Station
+Colorado-Springs
 Columbia
 Columbus
 Concord
-Coral Springs
+Coral-Springs
 Corona
-Corpus Christi
-Costa Mesa
+Corpus-Christi
+Costa-Mesa
 Dallas
-Daly City
+Daly-City
 Danbury
 Davenport
-Davidson County
+Davidson-County
 Dayton
-Daytona Beach
+Daytona-Beach
 Deltona
 Denton
 Denver
-Des Moines
+Des-Moines
 Detroit
 Downey
 Duluth
 Durham
-El Monte
-El Paso
+El-Monte
+El-Paso
 Elizabeth
-Elk Grove
+Elk-Grove
 Elkhart
 Erie
 Escondido
@@ -106,26 +106,26 @@ Fayetteville
 Fitchburg
 Flint
 Fontana
-Fort Collins
-Fort Lauderdale
-Fort Smith
-Fort Walton Beach
-Fort Wayne
-Fort Worth
+Fort-Collins
+Fort-Lauderdale
+Fort-Smith
+Fort-Walton-Beach
+Fort-Wayne
+Fort-Worth
 Frederick
 Fremont
 Fresno
 Fullerton
 Gainesville
-Garden Grove
+Garden-Grove
 Garland
 Gastonia
 Gilbert
 Glendale
-Grand Prairie
-Grand Rapids
+Grand-Prairie
+Grand-Rapids
 Grayslake
-Green Bay
+Green-Bay
 GreenBay
 Greensboro
 Greenville
@@ -135,21 +135,21 @@ Hampton
 Harlingen
 Harrisburg
 Hartford
-Havre de Grace
+Havre-de-Grace
 Hayward
 Hemet
 Henderson
 Hesperia
 Hialeah
 Hickory
-High Point
+High-Point
 Hollywood
 Honolulu
 Houma
 Houston
 Howell
 Huntington
-Huntington Beach
+Huntington-Beach
 Huntsville
 Independence
 Indianapolis
@@ -159,13 +159,13 @@ Irving
 Jackson
 Jacksonville
 Jefferson
-Jersey City
-Johnson City
+Jersey-City
+Johnson-City
 Joliet
 Kailua
 Kalamazoo
 Kaneohe
-Kansas City
+Kansas-City
 Kennewick
 Kenosha
 Killeen
@@ -173,23 +173,23 @@ Kissimmee
 Knoxville
 Lacey
 Lafayette
-Lake Charles
+Lake-Charles
 Lakeland
 Lakewood
 Lancaster
 Lansing
 Laredo
-Las Cruces
-Las Vegas
+Las-Cruces
+Las-Vegas
 Layton
 Leominster
 Lewisville
 Lexington
 Lincoln
-Little Rock
-Long Beach
+Little-Rock
+Long-Beach
 Lorain
-Los Angeles
+Los-Angeles
 Louisville
 Lowell
 Lubbock
@@ -210,36 +210,36 @@ Miami
 Milwaukee
 Minneapolis
 Miramar
-Mission Viejo
+Mission-Viejo
 Mobile
 Modesto
 Monroe
 Monterey
 Montgomery
-Moreno Valley
+Moreno-Valley
 Murfreesboro
 Murrieta
 Muskegon
-Myrtle Beach
+Myrtle-Beach
 Naperville
 Naples
 Nashua
 Nashville
-New Bedford
-New Haven
-New London
-New Orleans
-New York
-New York City
+New-Bedford
+New-Haven
+New-London
+New-Orleans
+New-York
+New-York-City
 Newark
 Newburgh
-Newport News
+Newport-News
 Norfolk
 Normal
 Norman
-North Charleston
-North Las Vegas
-North Port
+North-Charleston
+North-Las-Vegas
+North-Port
 Norwalk
 Norwich
 Oakland
@@ -247,7 +247,7 @@ Ocala
 Oceanside
 Odessa
 Ogden
-Oklahoma City
+Oklahoma-City
 Olathe
 Olympia
 Omaha
@@ -255,15 +255,15 @@ Ontario
 Orange
 Orem
 Orlando
-Overland Park
+Overland-Park
 Oxnard
-Palm Bay
-Palm Springs
+Palm-Bay
+Palm-Springs
 Palmdale
-Panama City
+Panama-City
 Pasadena
 Paterson
-Pembroke Pines
+Pembroke-Pines
 Pensacola
 Peoria
 Philadelphia
@@ -271,54 +271,54 @@ Phoenix
 Pittsburgh
 Plano
 Pomona
-Pompano Beach
-Port Arthur
-Port Orange
-Port Saint Lucie
-Port St. Lucie
+Pompano-Beach
+Port-Arthur
+Port-Orange
+Port-Saint-Lucie
+Port-St.-Lucie
 Portland
 Portsmouth
 Poughkeepsie
 Providence
 Provo
 Pueblo
-Punta Gorda
+Punta-Gorda
 Racine
 Raleigh
-Rancho Cucamonga
+Rancho-Cucamonga
 Reading
 Redding
 Reno
 Richland
 Richmond
-Richmond County
+Richmond-County
 Riverside
 Roanoke
 Rochester
 Rockford
 Roseville
-Round Lake Beach
+Round-Lake-Beach
 Sacramento
 Saginaw
-Saint Louis
-Saint Paul
-Saint Petersburg
+Saint-Louis
+Saint-Paul
+Saint-Petersburg
 Salem
 Salinas
-Salt Lake City
-San Antonio
-San Bernardino
-San Buenaventura
-San Diego
-San Francisco
-San Jose
-Santa Ana
-Santa Barbara
-Santa Clara
-Santa Clarita
-Santa Cruz
-Santa Maria
-Santa Rosa
+Salt-Lake-City
+San-Antonio
+San-Bernardino
+San-Buenaventura
+San-Diego
+San-Francisco
+San-Jose
+Santa-Ana
+Santa-Barbara
+Santa-Clara
+Santa-Clarita
+Santa-Cruz
+Santa-Maria
+Santa-Rosa
 Sarasota
 Savannah
 Scottsdale
@@ -327,20 +327,20 @@ Seaside
 Seattle
 Sebastian
 Shreveport
-Simi Valley
-Sioux City
-Sioux Falls
-South Bend
-South Lyon
+Simi-Valley
+Sioux-City
+Sioux-Falls
+South-Bend
+South-Lyon
 Spartanburg
 Spokane
 Springdale
 Springfield
-St. Louis
-St. Paul
-St. Petersburg
+St.-Louis
+St.-Paul
+St.-Petersburg
 Stamford
-Sterling Heights
+Sterling-Heights
 Stockton
 Sunnyvale
 Syracuse
@@ -350,7 +350,7 @@ Tampa
 Temecula
 Tempe
 Thornton
-Thousand Oaks
+Thousand-Oaks
 Toledo
 Topeka
 Torrance
@@ -362,22 +362,22 @@ Tyler
 Utica
 Vallejo
 Vancouver
-Vero Beach
+Vero-Beach
 Victorville
-Virginia Beach
+Virginia-Beach
 Visalia
 Waco
 Warren
 Washington
 Waterbury
 Waterloo
-West Covina
-West Valley City
+West-Covina
+West-Valley-City
 Westminster
 Wichita
 Wilmington
 Winston
-Winter Haven
+Winter-Haven
 Worcester
 Yakima
 Yonkers

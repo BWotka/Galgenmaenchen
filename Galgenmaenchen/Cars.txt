@@ -1,5 +1,5 @@
-Alfa Romeo
-Aston Martin
+Alfa-Romeo
+Aston-Martin
 Audi
 Bentley
 Benz
@@ -15,7 +15,7 @@ Dacia
 Daewoo
 Daihatsu
 Datsun
-De Lorean
+De-Lorean
 Dino
 Dodge
 Farboud
@@ -32,7 +32,7 @@ Koenigsegg
 Lada
 Lamborghini
 Lancia
-LandRover
+Land-Rover
 Lexus
 Ligier
 Lincoln
@@ -41,7 +41,7 @@ Martini
 Maserati
 Maybach
 Mazda
-McLaren
+Mc-Laren
 Mercedes
 Mini
 Mitsubishi
@@ -52,7 +52,7 @@ Peugeot
 Pontiac
 Porsche
 Renault
-Rolls Royce
+Rolls-Royce
 Rover
 Saab
 Seat
