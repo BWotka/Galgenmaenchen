@@ -11,7 +11,8 @@ public class Starter {
   /**
    * main method to setup and start the game.
    * 
-   * @param args
+   * 
+   * 
    */
   public static void main(String[] args) {
     WordQuiz game = new WordQuiz();
@@ -32,6 +33,8 @@ public class Starter {
     WordList listDrink = new WordList(Subject.Drinks);
     WordList listCountries = new WordList(Subject.Countries);
     WordList listCities = new WordList(Subject.Cities);
+    System.out.println(listAnimal.getRandomWord());
+
 
     game.addWordList(listAnimal);
     game.addWordList(listCar);

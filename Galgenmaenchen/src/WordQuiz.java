@@ -93,7 +93,11 @@ public class WordQuiz {
    */
   public void playGame(int wordLength, Subject wordSubject, Difficulty gameDifficulty) {
     String gameWord =
-        wordLists.get(wordLists.indexOf(new WordList(wordSubject))).getWordOfLength(wordLength);
+        wordLists.get(wordLists.indexOf(new WordList(wordSubject)) + 1).getWordOfLength(wordLength);
+
+    System.out.println(gameWord);
+    System.out.println("" + wordLength);
+    System.out.println("" + gameDifficulty.getDifficulty());
 
     // both writers are set up
     for (Writer aktWriter : myWriters) {

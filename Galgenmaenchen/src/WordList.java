@@ -13,8 +13,8 @@ public class WordList {
   public WordList(Subject pSubject) {
     subject = pSubject;
     words = new ArrayList<>();
-    if (readListFromFile(pSubject.toString() + ".txt")) {
-      System.out.println("List with the topic '" + subject.toString() + "' was succesfully read.");
+    if (!readListFromFile(pSubject.toString() + ".txt")) {
+      System.out.println("Error with reading in" + pSubject.toString() + ".txt");
     }
 
   }
@@ -30,7 +30,7 @@ public class WordList {
     }
 
     while (sc.hasNextLine()) {
-      words.add(new QuizWord(sc.nextLine()));
+      words.add(new QuizWord(sc.nextLine().toUpperCase()));
     }
     return true;
   }
