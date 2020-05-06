@@ -101,9 +101,7 @@ public class WordQuiz {
     String gameWord =
         wordLists.get(wordLists.indexOf(new WordList(wordSubject)) + 1).getWordOfLength(wordLength);
 
-    System.out.println(gameWord);
-    System.out.println("" + wordLength);
-    System.out.println("" + gameDifficulty.getDifficulty());
+
 
     // both writers are set up
     for (Writer aktWriter : myWriters) {
@@ -125,16 +123,30 @@ public class WordQuiz {
       // letter is wrong
       if (gameWord.indexOf(letter) == -1) {
         errorsLeft += -1;
+        for (Writer aktWriter : myWriters) {
+          aktWriter.write(correctLetters, letter, errorsLeft);
+        }
       }
-
       // letter is right
       else {
-        // the letter gets put into the list of correct chars
-        for (int c = 0; c < correctLetters.length; c++) {
-          if (correctLetters[c] == '\u0000') {
-            correctLetters[c] = letter;
-            c = correctLetters.length;
+        // test if letter was tried before
+        boolean triedBefore = false;
+        for (char t : correctLetters) {
+          if (t == letter) {
+            triedBefore = true;
           }
+        }
+
+
+        if (!triedBefore) {
+          // the letter gets put into the list of correct chars
+          for (int c = 0; c < correctLetters.length; c++) {
+            if (correctLetters[c] == '\u0000') {
+              correctLetters[c] = letter;
+              c = correctLetters.length;
+            }
+          }
+
         }
 
         for (Writer aktWriter : myWriters) {
@@ -143,8 +155,15 @@ public class WordQuiz {
         }
 
       }
-
-
+      if (correctLetters.length == wordLength) {
+        System.out.println("You won!");
+        System.out.println("You correctly guessed the word: " + gameWord);
+        System.out.println("You still had " + errorsLeft + " tries until gameover");
+      }
+      if (errorsLeft == 0) {
+        System.out.println("Gameover! You lost");
+        System.out.println("The word was: " + gameWord);
+      }
     }
 
   }

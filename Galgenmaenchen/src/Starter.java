@@ -32,7 +32,6 @@ public class Starter {
     WordList listVideogames = new WordList(Subject.Videogames);
     WordList listWuppi = new WordList(Subject.Wuppi);
     WordList listFluppi = new WordList(Subject.Fluppi);
-    System.out.println(listAnimal.getRandomWord());
 
 
     game.addWordList(listAnimal);
@@ -42,7 +41,6 @@ public class Starter {
     game.addWordList(listWuppi);
     game.addWordList(listFluppi);
 
-    System.out.println("Gelesenes Zeichen: " + creader.readNextChar());
 
     game.playGame(6, Subject.Animals, Difficulty.Normal);
 

@@ -19,6 +19,7 @@ public class ConsoleReader {
    * @return returns input Char
    */
   public char readNextChar() {
+    System.out.println("Write a single character that you want to guess");
     try {
       return reader.readLine().charAt(0);
     } catch (IOException e) {

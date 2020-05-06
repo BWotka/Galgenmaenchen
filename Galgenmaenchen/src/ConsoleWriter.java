@@ -23,10 +23,11 @@ public class ConsoleWriter extends Writer {
     System.out.println();
     System.out.println("der geratene Buchstabe ist: " + newLetter);
 
-    
-    for (int i = 0; i < word.length(); i++) { //output the word in the current state of the game
+
+    for (int i = 0; i < word.length(); i++) { // output the word in the current state of the game
       boolean guessed = false;
-      if (word.charAt(i) == '-') { //'-' is the symbol for a whitespace and the user has not to guess it
+      if (word.charAt(i) == '-') { // '-' is the symbol for a whitespace and the user has not to
+                                   // guess it
         System.out.print(word.charAt(i));
       } else {
         for (int j = 0; j < guessedLetters.length; j++) {
@@ -42,11 +43,10 @@ public class ConsoleWriter extends Writer {
     }
     System.out.println();
 
-    boolean correct; //tests if the new letter is in the word
+    boolean correct; // tests if the new letter is in the word
     if (word.indexOf(newLetter) != -1) {
       correct = true;
-    }
-    else {
+    } else {
       correct = false;
     }
     return correct;
